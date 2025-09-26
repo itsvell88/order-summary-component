@@ -1,0 +1,215 @@
+/* RESET DEFAULT STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    /* Container Level Colors */
+    --level1-con: 1.5px solid red;
+    --level2-con: 1.5px solid cyan;
+    --level3-con: 1.5px solid magenta;
+    --level4-con: 1.5px solid greenyellow;
+    --level5-con: 1.5px solid blue;
+
+    /* Color Palette */
+    --cp-blue-100: hsl(225, 100%, 94%);
+    --cp-blue-700: hsl(245, 75%, 52%);
+    --cp-blue-50: hsl(225, 100%, 98%);
+    --cp-gray-600: hsl(224, 23%, 55%);
+    --cp-blue-950: hsl(223, 47%, 23%);
+    --cp-neutralwhite: hsl(0, 0%, 98%);
+}
+
+/* BASE STYLE ---------------------------------------------------------------------------- */
+
+/* New Default Styling */
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Red Hat Display";
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--cp-blue-100);
+}
+
+main {
+    /*outline: var(--level1-con); /* testing purpose */
+    background-color: var(--cp-neutralwhite);
+    box-shadow: 0px 25px 35px 0px hsla(223, 47%, 23%, 0.25);
+    width: clamp(21.2rem, 50%, 26.8%);
+    height: auto;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 0.95rem;
+    gap: 2.5em;
+    overflow: hidden;
+}
+
+.sec1,
+.sec2 {
+    /*outline: var(--level2-con); /* testing purpose */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec1 {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.sec2 {
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    gap: 1.8em;
+    padding: 0em 1.7em 2em;
+}
+
+.description-con {
+    /*outline: var(--level3-con); /* testing purpose */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.95rem;
+    gap: 1em;
+    padding: 0em 0.8em;
+}
+
+h1 {
+    color: var(--cp-blue-950);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--cp-gray-600);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.55em;
+}
+
+.product-con {
+    /*outline: var(--level3-con); /* testing purpose */
+    background-color: var(--cp-blue-50);
+    border-radius: 0.6rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.95rem;
+    gap: 1.35em;
+    padding: 1.1em;
+}
+
+.detail-con {
+    /*outline: var(--level4-con); /* testing purpose */
+    width: 100%;
+}
+
+h2 {
+    color: var(--cp-blue-950);
+    font-weight: 900;
+    font-size: 0.95rem;
+}
+
+.pricing {
+    font-weight: 700;
+    font-size: 0.93rem;
+}
+
+.change-option {
+    /*outline: var(--level4-con); /* testing purpose */
+    color: var(--cp-blue-700);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.change-option:hover {
+    color: hsl(245, 75%, 70%); /* last one is lightness */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.purchase-button {
+    background-color: var(--cp-blue-700);
+    width: 100%;
+    border: 0;
+    border-radius: 0.6rem;
+    box-shadow: 0px 15px 25px 0px hsla(245, 75%, 52%, 0.25);
+    color: var(--cp-neutralwhite);
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 1em;
+}
+
+.purchase-button:hover {
+    background-color: hsl(245, 75%, 70%); /* last one is lightness */
+    cursor: pointer;
+}
+
+.cancel-option {
+    font-weight: 900;
+}
+
+.cancel-option:hover {
+    color: var(--cp-blue-950);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--cp-blue-950);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cp-neutralwhite);
+    font-size: 1rem;
+    padding: 1em;
+}
+
+a {
+    color: var(--cp-gray-600);
+}
+
+/* TABLET & DESKTOP ---------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+
+    h1 {
+        font-size: clamp(1.5rem, 0.7rem + 1vw, 1.8rem);
+    }
+
+    .sec2 {
+        padding: 2% 11% 10%;
+    }
+}
+
+/* LARGE DESKTOP ---------------------------------------------------------------------------- */
+
+@media (min-width: 1440px) {
+    h1 {
+        font-size: 1.735rem;
+    }
+}
